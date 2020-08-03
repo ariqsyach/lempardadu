@@ -1,5 +1,18 @@
 package com.example.challenge
 
-class Dadu {
-    val dadu = arrayListOf<Int>(1, 2, 3, 4, 5, 6)
-}
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import java.util.*
+
+@Entity(tableName = "items_table")
+data class Dadu (
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "skor")
+    var skor: Int = 0,
+
+    @ColumnInfo(name = "user")
+    var user: String? = ""
+
+
+)

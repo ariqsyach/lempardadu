@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TopScoreActivity"
+    android:background="#DAF1E9">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="70dp"
+        android:fontFamily="@font/eight_bit"
+        android:gravity="center_horizontal"
+        android:text="@string/top_score"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/who_s_got_the_biggest_score"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        android:textSize="40sp"
+        android:fontFamily="@font/madness"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="70dp"
+        android:background="@color/cardview_light_background">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_topskor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_skor" />
+    </RelativeLayout>
+
+
+</FrameLayout>
